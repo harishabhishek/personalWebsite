@@ -71,7 +71,6 @@ h1 {
   @include setHeightWidth(100%, 100%);
   @include alignTextCenter();
   position: absolute;
-  background-image: url(../images/backgroundImg.jpg);
   background-attachment: fixed;
   z-index: -99;
   line-height: 20px;

@@ -8,7 +8,7 @@ mainAppControllers.controller('listController2',['$scope', '$http',
     function($scope, $http){
         $scope.movies = [];
 
-        $http.get('data/imdb250.json').success(function (response){
+        $http.get('./data/imdb250.json').success(function (response){
             $scope.movies = response;
             //console.log($scope.movies);
         });
@@ -23,7 +23,7 @@ mainAppControllers.controller('galleryController2',['$scope', '$http', '$locatio
         $scope.genres = [];
         tempArr = [];
 
-        $http.get('data/imdb250.json').success(function (response){
+        $http.get('./data/imdb250.json').success(function (response){
             $scope.movies = response;
 
 
@@ -72,7 +72,7 @@ mainAppControllers.controller('detailsController2',['$scope', '$http','$routePar
         //console.log($scope.prevLink);
         //console.log($scope.nextLink);
 
-        $http.get('data/imdb250.json').success(function (response){
+        $http.get('./data/imdb250.json').success(function (response){
             $scope.movies = response;
 
             for(itr = 0 ; itr < $scope.movies.length; itr++ ){
@@ -98,7 +98,7 @@ mainAppControllers.controller('extraController2',['$scope', '$http',
         $scope.directors= {};
         $scope.actorAverage = {};
 
-        $http.get('data/imdb250.json').success(function (response){
+        $http.get('./data/imdb250.json').success(function (response){
             $scope.movies = response;
 
 
@@ -257,3 +257,84 @@ mainAppControllers.controller('extraController2',['$scope', '$http',
 ]);
 
 
+//EC Part A
+
+//var csAirAppControllers = angular.module('csAirAppControllers', []);
+
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+
+mainAppControllers.controller('csAirAppControllers',['$scope', '$http',
+
+    function($scope, $http){
+        $scope.cityCodes = [];
+        tempArr = [];
+        $scope.routes = {};
+
+        $scope.hideIt = true;
+
+        $http.get('./data/map_data.json').success(function (response){
+
+
+            citiesAre = response["metros"];
+            for(itr = 0; itr<citiesAre.length; itr++){
+                $scope.cityCodes[citiesAre[itr]["code"]] = citiesAre[itr]["name"];
+            }
+
+
+
+            //Link Start
+
+
+
+            Allroutes = response["routes"];
+
+            for(itr = 0; itr< Allroutes.length; itr++){
+                eachRoute = Allroutes[itr];
+                flight = eachRoute["ports"];
+                from = flight[0];
+                to = flight[1];
+
+                if(! (from in tempArr)){
+                    tempArr.push(from);
+                }
+                if(! (to in tempArr)){
+                    tempArr.push(to);
+                }
+
+                if(from in $scope.routes){
+                    retVal = $scope.routes[from];
+                    retVal.push(to);
+                    $scope.routes[from] = retVal;
+                }
+                else{
+                    retVal = [];
+                    retVal.push(to);
+                    $scope.routes[from] = retVal;
+                }
+
+                if(to in $scope.routes){
+                    retVal = $scope.routes[to];
+                    retVal.push(from);
+                    $scope.routes[to] = retVal;
+                }
+                else{
+                    retVal = [];
+                    retVal.push(from);
+                    $scope.routes[to] = retVal;
+                }
+            }
+
+            $scope.codes = tempArr.filter(onlyUnique);
+            $scope.codes.sort();
+            console.log($scope.codes);
+            console.log($scope.routes);
+
+
+        });
+
+        //Additional Stuff Here
+    }
+
+]);

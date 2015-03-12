@@ -1,0 +1,30 @@
+<div class="divCenter imageText">
+
+    Going From:
+    <select ng-model="goingFrom"
+            ng-options="code for code in codes" class="imageText" style="text-align: center; width: 20%; font-size: 20px">
+    </select>
+    <br>The value selected is <span style="font-size: 23px">{{ cityCodes[goingFrom] }}</span>
+
+    <br>
+    <br>
+    Going To:
+    <select ng-model="goingTo"
+            ng-options="newcode for newcode in routes[goingFrom]" class="imageText" style="text-align: center; width: 20%; font-size: 20px">
+
+    </select>
+    <br>The value selected is <span style="font-size: 23px">{{ cityCodes[goingTo] }}</span>
+
+        <br>
+    <br>
+    <br>
+
+    <div class="divCenter">
+    <a href="http://www.gcmap.com/mapui?P={{goingFrom}}-{{goingTo}}" target="_blank" style="font-size: 30px"> Go To Route</a>
+    </div>
+    <!--<div ng-hide="hideIt" class="ng-hide">-->
+        <!--<object data=http://www.gcmap.com/mapui?P={{goingFrom}}-{{goingTo} width="600" height="400">-->
+            <!--<embed src=http://www.gcmap.com/mapui?P={{goingFrom}}-{{goingTo} width="600" height="400">-->
+        <!--</embed> Error: Embedded data could not be displayed. </object>-->
+    <!--</div>-->
+</div>

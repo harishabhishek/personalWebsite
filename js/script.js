@@ -19,7 +19,6 @@ var scrollAmount = 50;
 
 $(window).on('scroll', function(){
 
-    console.log("here");
     if($(window).scrollTop()>=scrollAmount){
         $('#aboutMe').addClass('highlightIt');
     }

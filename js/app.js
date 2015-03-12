@@ -43,11 +43,13 @@ mainApp.config(['$routeProvider',
                 templateUrl: './partials/newView.html',
                 controller: 'extraController2'
             }).
+            when('/newData', {
+                templateUrl: './partials/csAirRoutes.html',
+                controller: 'csAirAppControllers'
+            }).
             otherwise({
             redirectTo: '/list'
         });
 
     }
 ]);
-
-
