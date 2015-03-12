@@ -1,5 +1,5 @@
 <div >
-    <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-11 text-center the-grid">
+    <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-11 text-center the-grid" style="padding: 20px">
         <li>
             <div ng-click="alert('')" class="genreButton">All</div>
         </li>
@@ -8,7 +8,7 @@
         </li>
     </ul>
 
-    <ul  class="small-block-grid-2 medium-block-grid-5 large-block-grid-10 ">
+    <ul  class="small-block-grid-2 medium-block-grid-5 large-block-grid-10 " style="padding: 20px">
         <li ng-repeat="movie in movies | filter:{genre: filter}" >
             <div class="divCenter">
                 <!--<span ng-bind="movie.title"> </span>: <span ng-bind="movie.rank"></span> <br>-->
