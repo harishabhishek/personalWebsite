@@ -272,6 +272,8 @@ mainAppControllers.controller('csAirAppControllers',['$scope', '$http',
         tempArr = [];
         $scope.routes = {};
 
+        $scope.cityToCode = [];
+
         $scope.hideIt = true;
 
         $http.get('./data/map_data.json').success(function (response){
@@ -280,9 +282,10 @@ mainAppControllers.controller('csAirAppControllers',['$scope', '$http',
             citiesAre = response["metros"];
             for(itr = 0; itr<citiesAre.length; itr++){
                 $scope.cityCodes[citiesAre[itr]["code"]] = citiesAre[itr]["name"];
+                $scope.cityToCode[citiesAre[itr]["name"]] = $scope.cityToCode[citiesAre[itr]["code"]];
             }
 
-
+            $scope.cityToCode.sort();
 
             //Link Start
 
