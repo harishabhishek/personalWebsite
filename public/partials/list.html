@@ -1,0 +1,38 @@
+
+
+<div class="divCenter search" >
+    Search: <input ng-model="query"> </imput> <br>
+    Sort By:
+    <select ng-model="orderProp"  style="width: 100px">
+        <option value="title"> Alphabetical </option>
+        <option value="rank" selected> Rank</option>
+    </select> <br>
+
+    Order By:
+    <input type="radio" ng-model="reverse" ng-value="false"> Ascending
+    <input type="radio" ng-model="reverse" ng-value="true"> Descending
+
+    <br> <br>
+
+    <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1 ">
+        <li ng-repeat="movie in movies | filter:{title: query} | orderBy:orderProp:reverse">
+            <a href="#/details/{{movie.rank}}">
+                <div class="divWidth box2">
+                    <div class="row">
+                        <div class="small-3 medium-3 large-3 columns">
+                            <img ng-src="./data/images/{{movie.imdbID}}.jpg"/> <br>
+                        </div>
+                        <div class="small-9 medium-9 large-9 columns" style="text-align: left">
+                            <br>
+                            <strong>Rank: </strong> <span ng-bind="movie.rank"></span> <br>
+                            <strong>Title: </strong> <span ng-bind="movie.title"></span> <br>
+                            <strong>Director: </strong> <span ng-bind="movie.director"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+

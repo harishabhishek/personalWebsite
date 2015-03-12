@@ -1,0 +1,38 @@
+
+
+@mixin setHeightWidth($height, $width){
+  height: $height;
+  width: $width;
+}
+
+@mixin alignTextCenter{
+  text-align: center;
+}
+
+@mixin setHeight($height, $paddingTop) {
+  height: $height;
+  padding-top: $paddingTop;
+}
+
+@mixin setFontFaceSize($face, $size){
+  font-family: $face;
+  font-size: $size;
+}
+
+@mixin anchorProperties(){
+  a:link {
+    @include noDecorationForAnchor(none);
+  }
+
+  a:visited {
+    @include noDecorationForAnchor(none);
+  }
+
+  a:hover {
+    @include noDecorationForAnchor(none);
+  }
+
+  a:active {
+    @include noDecorationForAnchor(none);
+  }
+}

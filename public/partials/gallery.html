@@ -1,0 +1,19 @@
+<div >
+    <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-11 text-center the-grid">
+        <li>
+            <div ng-click="alert('')" class="genreButton">All</div>
+        </li>
+        <li ng-repeat="genre in genres">
+            <div ng-click=" alert(genre) " ng-bind="genre" class="genreButton"></div>
+        </li>
+    </ul>
+
+    <ul  class="small-block-grid-2 medium-block-grid-5 large-block-grid-10 ">
+        <li ng-repeat="movie in movies | filter:{genre: filter}" >
+            <div class="divCenter">
+                <!--<span ng-bind="movie.title"> </span>: <span ng-bind="movie.rank"></span> <br>-->
+                <a href="#/details/{{movie.rank}}"><img ng-src="./data/images/{{movie.imdbID}}.jpg" class="box"/> </a>
+            </div>
+        </li>
+    </ul>
+</div>

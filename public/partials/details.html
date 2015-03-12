@@ -1,0 +1,31 @@
+<div class="WrapperDivv" style="width: 100%">
+
+    <div style="width: 25%; text-align: center; float: left; padding-top: 60px">
+        <a href="{{prevLink}}"><i class="fa fa-arrow-left fa-3x box2"></i>
+        </a>
+    </div>
+
+    <div class="divWidth " style="padding: 10px; width: 50%; float: left">
+        <div id="Link">
+
+        </div>
+        <div class="row">
+            <div class="small-3 medium-5 large-4 columns">
+                <img ng-src="./data/images/{{selectedMovie.imdbID}}.jpg"/>
+            </div>
+            <div class="small-9 medium-7 large-8 columns" style="text-align: left">
+                <div style="font-size: x-large"> <strong>Title: </strong> <span ng-bind="selectedMovie.title"></span><br></div>
+                <strong>Rank: </strong> <span ng-bind="selectedMovie.rank"></span> <br>
+                <strong>Director: </strong> <span ng-bind="selectedMovie.director"></span> <br>
+                <div style="font-size: smaller"><span ng-bind="selectedMovie.plot"></span><br></div>
+                <div style="font-size: small"><strong>Release Date: </strong> <span ng-bind="selectedMovie.released"></span><br></div>
+                <div style="font-size: small"><strong>Runtime: </strong> <span ng-bind="selectedMovie.runtime"></span><br></div>
+                <div style="font-size: small"><strong>Awards: </strong> <span ng-bind="selectedMovie.awards"></span><br></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 25%; text-align: center; float: left; padding-top: 60px">
+        <a href="{{nextLink}}"><i class="fa fa-arrow-right fa-3x box2"></i></a>
+    </div>
+</div>

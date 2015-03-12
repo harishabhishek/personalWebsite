@@ -85,6 +85,7 @@ $topbar-input-height: rem-calc(28) !default;
 $topbar-divider-border-bottom: solid 1px scale-color($topbar-bg-color, $lightness: 13%) !default;
 $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%) !default;
 
+
 // Sticky Class
 $topbar-sticky-class: ".sticky" !default;
 $topbar-arrows: true !default; //Set false to remove the triangle icon from the menu item
@@ -125,11 +126,13 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
 
     // Wrapped around .top-bar to make it stick to the top
     .fixed {
+      height: $topbar-height;
       width: 100%;
       #{$default-float}: 0;
       position: fixed;
       top: 0;
       z-index: 99;
+
 
       &.expanded:not(.top-bar) {
         overflow-y: auto;
