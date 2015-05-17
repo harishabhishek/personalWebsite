@@ -61,7 +61,7 @@ h1 {
 
 .backgroundImage{
 
-  @include setHeight(500px, 0px);
+  @include setHeight(550px, 0px);
   position: relative;
 
 }
@@ -266,3 +266,21 @@ h1 {
   border-color: #001f3f;
   border-radius: 5px;
 }
+
+.font-copperplate{
+  font-family: $copperPlate;
+}
+
+.font-copperplateShadow{
+  font-family: $copperPlate;
+  text-shadow: 1px 1px lightgrey;
+}
+
+.font-rockwell{
+  font-family: $rockwell;
+}
+
+.font-pacifico{
+  font-family: $pacifico;
+}
+
