@@ -30,7 +30,7 @@ $(window).on('scroll', function(){
 });
 
 function aboutMe(){
-   var div =  $('#me');
+   var div =  $('#meMain');
 
     target_offset = div.offset();
     target_top = target_offset.top - 50 ;
@@ -39,8 +39,8 @@ function aboutMe(){
 
 }
 
-function thoughts(){
-    var div =  $('#videoPanel');
+function resume(){
+    var div =  $('#resume');
 
     target_offset = div.offset();
     target_top = target_offset.top - 50 ;
@@ -49,8 +49,8 @@ function thoughts(){
 
 }
 
-function modalClick(){
-    var div =  $('#modalDiv');
+function skills(){
+    var div =  $('#skills');
 
     target_offset = div.offset();
     target_top = target_offset.top - 50 ;
@@ -59,8 +59,9 @@ function modalClick(){
 
 }
 
-function funTimes(){
-    var div =  $('#funTimes');
+
+function pastExp(){
+    var div =  $('#experience');
 
     target_offset = div.offset();
     target_top = target_offset.top - 50 ;
@@ -71,6 +72,16 @@ function funTimes(){
 
 function findMe(){
     var div =  $('#socialWrapper');
+
+    target_offset = div.offset();
+    target_top = target_offset.top - 50 ;
+
+    $('html, body').animate({scrollTop:target_top}, 500);
+
+}
+
+function contact(){
+    var div =  $('#email');
 
     target_offset = div.offset();
     target_top = target_offset.top - 50 ;

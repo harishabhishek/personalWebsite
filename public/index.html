@@ -1,16 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Abhishek Harish</title>
-  <script src="./lib/angular/angular.min.js"></script>
-  <script src="./js/controllers.js"></script>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./foundation/css/foundation.css">
+    <meta charset="UTF-8">
+    <title>Abhishek Harish</title>
+    <script src="./lib/angular/angular.min.js"></script>
+    <script src="./lib/angular-route/angular-route.js"></script>
+    <script src="./lib/angular-animate/angular-animate.js"></script>
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"/>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers.js"></script>
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./foundation/css/foundation.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" type='text/css'/>
+    <link href="http://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"  />
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="./lib/slick.js/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./lib/slick.js/slick/slick-theme.css"/>
@@ -47,22 +54,25 @@
         <section class="top-bar-section">
             <ul class="right">
                 <li>
-                    <a onclick="backtotop()">Home</a>
-                </li>
-                <li>
                     <a onclick="aboutMe()"> About Me </a>
                 </li>
                 <li>
-                    <a onclick="thoughts()"> Thoughts</a>
+                    <a onclick="contact()"> Email Info</a>
                 </li>
                 <li>
-                    <a onclick="funTimes()"> Fun-Times </a>
-                </li>
-                <li>
-                    <a onclick="modalClick()"> Comments </a>
+                    <a onclick="resume()"> Resume</a>
                 </li>
                 <li>
                     <a onclick="findMe()"> Find Me </a>
+                </li>
+                <li>
+                    <a onclick="pastExp()"> Past Experiences </a>
+                </li>
+                <li>
+                    <a onclick="skills()"> All Skills </a>
+                </li>
+                <li>
+                    <a onclick="backtotop()">Top</a>
                 </li>
             </ul>
         </section>
@@ -78,9 +88,9 @@
         <span class="font-pacifico" style="font-size: xx-large"> Master's of Computer Science @ UIUC
         </span> <br> <br>
         <a href="data/resume.pdf" target="_blank" class="font-pacifico"
-                style="font-size: x-large" > Resume</a> <br> <br>
+           style="font-size: xx-large" > Resume</a> <br> <br>
 
-        <div class="font-copperplate">
+        <div id="email" class="font-copperplate">
             <span>
                  <strong>Email: </strong>
             </span> aharishabhishek@gmail.com <br>
@@ -103,7 +113,7 @@
                     <span style="font-size: 15px">Keep Scrolling Down !!! </span> <br>
                     <br> <br>
                     <br>
-                    <div style="font-size: 20px">
+                    <div id="meMain" style="font-size: 20px">
                         <span> I am a 5 year BS/MS student at U of I</span> <br><br><br>
                         <span> I am from New Delhi, India</span> <br><br><br>
                         <span> I am a kickboxer and Pianist (That's a unique combination)</span> <br> <br> <br>
@@ -118,24 +128,24 @@
 </div>
 
 <div class=" show-for-small-down" style="background-image: url('./images/backgroundImg.jpg')">
-        <div class="row font-copperplateShadow">
-            <div class="small-12 large-12 medium-12 columns divCenter ">
-                <div style="font-size: 35px">
-                    <br>
-                    <span class="bigText" style="margin-top: 20%">Want to know more about me? </span><br>
-                    <span style="font-size: 15px">Keep Scrolling Down !!! </span> <br>
-                    <br>
-                    <div style="font-size: 20px">
-                        <span> I am a 5 year BS/MS student at U of I</span> <br><br>
-                        <span> I am from New Delhi, India</span> <br><br>
-                        <span> I am a kickboxer and Pianist (That's a unique combination)</span> <br><br>
-                        <span> And... I am an aspiring Poet and a Stand-up Comedian <br></span>
-                        <span> I love challenges, trying out new things and I am always down for adventure</span> <br><br>
-                        <span> Cooking is an art that I am proficient at </span><br>
-                    </div>
+    <div class="row font-copperplateShadow">
+        <div class="small-12 large-12 medium-12 columns divCenter ">
+            <div style="font-size: 35px">
+                <br>
+                <span class="bigText" style="margin-top: 20%">Want to know more about me? </span><br>
+                <span style="font-size: 15px">Keep Scrolling Down !!! </span> <br>
+                <br>
+                <div style="font-size: 20px">
+                    <span> I am a 5 year BS/MS student at U of I</span> <br><br>
+                    <span> I am from New Delhi, India</span> <br><br>
+                    <span> I am a kickboxer and Pianist (That's a unique combination)</span> <br><br>
+                    <span> And... I am an aspiring Poet and a Stand-up Comedian <br></span>
+                    <span> I love challenges, trying out new things and I am always down for adventure</span> <br><br>
+                    <span> Cooking is an art that I am proficient at </span><br>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 <br>
 <br>
@@ -145,21 +155,25 @@
 <div id="me">
     <div class="row imageText">
         <div class="small-12 large-4 medium-4 columns divCenter ">
-            <h1> Creative</h1>
+            <h1 class="font-copperplate"> Creative</h1>
             <i class="fa fa-text-height fa-4x"></i> <br>
-            <div class="innerText">I am an extremely modivated,
-                dedicated and hardworking but having fun in what I am doing is the most important thing. </div>
+            <div class="innerText">I am an extremely motivated,
+                dedicated and hardworking but having fun in what I am doing is the most important thing for me.
+                I like creating things and tacking challenges. I don't rest untill I have
+                solved the problem.
+            </div>
         </div>
         <div class="small-12 large-4 medium-4 columns divCenter">
-            <h1> About Me</h1>
+            <h1 class="font-copperplate"> About Me</h1>
             <i class="fa fa-university fa-4x"></i><br>
             <div class="innerText">I go to university of Illinois, the best school in the whole wide world. I am a senior in CS
-                and I am going to grad school.</div>
+                and I am going to grad school. I really like adventure sports, cooking, writing poems,
+                doing stand-up comedy and martial arts</div>
         </div>
         <div class="small-12 large-4 medium-4 columns divCenter">
-            <h1> Past Works</h1> <br>
+            <h1 class="font-copperplate"> Past Works</h1>
             <i class="fa fa-linux fa-4x"></i><br>
-            <div class="innerText">I will be interning at Google this summer. I have interned at Qualcomm and State Farm in the past.
+            <div class="innerText">I will be interning at Google this summer. Previously, I have interned at Qualcomm and State Farm in the past.
                 I will be doing my Masters Thesis under professor Ranjitha Kumar.</div>
         </div>
     </div>
@@ -170,128 +184,202 @@
 <br>
 
 
-<div class="show-for-medium-up" id="videoPanel">
-    <video id="myVideo" width="100%" height="320px" autoplay loop muted>
-        <source src="./data/icons/video2.mp4" type="video/mp4">
-    </video>
-    <div id="videoDiv">
-        <div style="font-size: 30px">
-            Some Great Quotess
-        </div>
-        <br>
-        <div class="row">
-            <div class="large-4 medium-4 columns">
-                <span> I love walking in rain so that no one can see me crying</span><br>
-                <span>:Charlie Chaplin</span>
-            </div>
-            <div class="large-4 medium-4 columns">
-                <span> He who wishes to be obeyed must know how to command</span><br>
-                <span>: Machiavelli</span>
-            </div>
-            <div class="large-4 medium-4 columns">
-                <span> All grown-ups were once children... only few of them remember it.</span><br>
-                <span>:Saint-Exupery</span>
-            </div>
-        </div>
-    </div>
+
+<div id="resume" class="text-center font-pacifico">
+
+    <a href="data/resume.pdf"  target="_blank"
+       style="font-size: 60px"> Resume</a>
+
 </div>
+<br>
+<div class="font-pacifico text-center"> or </div> <br>
+<div class="font-pacifico" id="socialWrapper" style="padding-bottom: 100px">
 
-<div class="show-for-small-down divCenter" style="background-color: #b6edff">
-    <div style="font-size: 30px">
-        Some Great Quotes
-    </div>
-    <div class="row imageText">
-        <div class="small-12 columns" style="padding-top: 20px">
-            <span> I love walking in rain so that no one can see me crying</span><br>
-            <span>:Charlie Chaplin</span>
-        </div>
-        <br>
-        <br>
-        <div class="small-12 columns" style="padding-top: 20px">
-            <span> He who wishes to be obeyed must know how to command</span><br>
-            <span>:Nicollo Machiavelli</span>
-        </div>
-        <br>
-        <br>
-        <div class="small-12 columns" style="padding-top: 20px">
-            <span> All grown-ups were once children... but only few of them remember it.</span><br>
-            <span>:Saint-Exupery</span>
-        </div>
-        <br>
-    </div>
-</div>
-
-
-<br><br><br>
-<div class="divCenter funtimes" id="funTimes">
-    Fun Times!
-</div>
-<div class="carousel-class divCenter" style="padding-top: 50px" >
-    <div class="divCenter"><img src="./data/icons/1.png" class="modalImageClass" ></div>
-    <div class="divCenter"><img src="./data/icons/2.png" class="modalImageClass"></div>
-    <div class="divCenter"><img src="./data/icons/3.png" class="modalImageClass"></div>
-    <div class="divCenter"><img src="./data/icons/4.png" class="modalImageClass"></div>
-    <div class="divCenter"><img src="./data/icons/5.png" class="modalImageClass"></div>
-</div>
-
-
-
-
-
-<div class=" show-for-medium-up divCenter"  style="padding-top: 50px; padding-bottom: 50px" id="modalDiv">
-
-    <a href="#" data-reveal-id="myModal" style="font-size: 25px"><i class="fa fa-comments fa-2x"></i>
-        Leave Comments <i class="fa fa-comments fa-2x"></i></a>
-    <div id="myModal" class="reveal-modal divCenter imageText" data-reveal>
-        <h2 class="imageText"> Please leave your feedback. It's appreciated</h2>
-        <span> Name: <input type="text"></span>
-        <span> Comments: <input type="text" style="height: 200px"></span>
-        <div class="submitButton" style="width: 10%; margin-left: 45%">Submit</div>
-        <a class="close-reveal-modal">&#215;</a>
-    </div>
-</div>
-
-<div class=" show-for-small-down divCenter"  style="padding-top: 50px; padding-bottom: 50px" id="modalDiv">
-
-
-    <a href="#" data-reveal-id="myModal" style="font-size: 20px"><i class="fa fa-comments fa-2x"></i>
-        Leave Comments <i class="fa fa-comments fa-2x"></i></a>
-
-    <div id="myModal" class="reveal-modal divCenter imageText" data-reveal>
-        <h2 class="imageText"> Please leave your feedback. It's appreciated</h2>
-        <span> Name: <input type="text"></span>
-        <span> Comments: <input type="text" style="height: 200px"></span>
-        <div class="submitButton" style="width: 100%">Submit</div>
-        <a class="close-reveal-modal">&#215;</a>
-    </div>
-</div>
-
-<div class="imageText divCenter">
-    ..Or..
-</div>
-
-<div id="socialWrapper" style="padding-bottom: 100px">
-    <i class="fa fa-android"></i> Find me on <i class="fa fa-android"></i>
-    <br> <br>
+    <span class="font-pacifico" style="font-size: 60px"> Find me on </span>
+    <br>
     <div class="row">
-        <div class="large-3 medium-3 small-6 columns">
-            <a href="https://www.facebook.com/abhishek.harish" target="_blank"> <img class="imageSpan" src="./data/icons/facebook.png"> </a>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="https://www.facebook.com/abhishek.harish" target="_blank">
+                <div class="image"> <img
+                        src="./data/icons/facebook-hand.png"/></div>
+            </a>
         </div>
-        <div class="large-3 medium-3 small-6 columns">
-            <a href="https://plus.google.com/103648798426230248141/posts" target="_blank"><img class="imageSpan" src="./data/icons/google.png"> </a>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="https://plus.google.com/103648798426230248141/posts" target="_blank">
+                <div class="image"><img class="imageSpan" src="./data/icons/google-hand.png"> </div>
+            </a>
         </div>
-        <div class="large-3 medium-3 small-6 columns">
-            <a href="https://www.linkedin.com/pub/abhishek-harish/66/854/350" target="_blank"><img class="imageSpan" src="./data/icons/linkedin.png"> </a>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="https://www.linkedin.com/pub/abhishek-harish/66/854/350" target="_blank">
+                <div class="image"> <img class="imageSpan" src="./data/icons/linkedin-hand.png"> </div>
+            </a>
         </div>
-        <div class="large-3 medium-3 small-6 columns">
-            <a href="https://twitter.com/?lang=en" target="_blank"><img class="imageSpan" src="./data/icons/twitter.png"></a>
+        <br> <br>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="https://twitter.com/?lang=en" target="_blank">
+                <div class="image"> <img class="imageSpan" src="./data/icons/twitter-hand.png"></div>
+            </a>
+        </div>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="http://harishabhishek.tumblr.com" target="_blank">
+                <div class="image"><img class="imageSpan" src="data/icons/tumblr-hand.png"></div>
+            </a>
+        </div>
+        <div class="large-4 medium-4 small-6 columns">
+            <a href="https://github.com/harishabhishek?tab=repositories" target="_blank">
+                <div class="image"><img class="imageSpan" src="./data/icons/github-hand.png"></div>
+            </a>
         </div>
     </div>
 
-    <a href="data/icons/resume.pdf" target="_blank" id="resume"> Resume </a>
+</div>
+
+<div id="experience"  class="font-copperplate" style="padding: 30px">
+
+    <div class="text-center font-pacifico" style="font-size: 45px">
+        Past Experience </div>
+
     <br>
 
+    <div id="google" class="row" >
+
+        <div class="small-4  medium-4 medium-offset-2 large-4 large-offset-2 columns">
+
+            <img src="./data/icons/google-hand.png"></div>
+
+        <div class="small-8 medium-6 large-6 columns" style="text-align: left">
+            <span style="font-size: x-large; color: #dc2c0f"> Google Inc. </span> <br>
+            <span> Summer 2015  </span> <br><br>
+            <span class="font-pacifico"> Software Engineering Intern </span> <br>
+            <span> Description of Work coming soon </span> <br>
+        </div>
+    </div>
+
+    <br><br>
+    <div id="qualcomm" class="row" >
+
+        <div class="small-4  medium-4 medium-offset-2 large-4 large-offset-2 columns">
+
+            <img src="./data/icons/qualcomm.png"></div>
+
+        <div class="small-8 medium-6 large-6 columns" style="text-align: left">
+            <span style="font-size: x-large; color: #00609e"> Qualcomm Inc. </span> <br>
+            <span> Summer 2014  </span> <br><br>
+            <span class="font-pacifico"> Software Engineering Intern </span> <br>
+            <div> Worked on developing test frameworks for testing Qualcomm Chips. Wrote
+                about 4000 lines of code. Languages used were C++, C, Java and Python. </div> <br>
+        </div>
+    </div>
+
+    <div id="StateFarm" class="row" >
+
+        <div class="small-4  medium-4 medium-offset-2 large-4 large-offset-2 columns">
+
+            <img src="./data/icons/state.jpg" style="width: 50%"></div>
+
+        <div class="small-8 medium-6 large-6 columns" style="text-align: left">
+            <span style="font-size: x-large; color: #cc0000"> State Farm Insurance Company </span> <br>
+            <span> Summer 2014  </span> <br><br>
+            <span class="font-pacifico"> Systems Engineering Intern </span> <br>
+            <div> I developed IP for which I currently have two Paternts Pending in my
+                name. I led a team of 4 interns throughout the development of the project.
+                We designed and developed a working prototype of a Mobile App
+                for scoring drivers on their driving skills. </div> <br>
+        </div>
+    </div>
+
+    <div id="Illinois" class="row" >
+
+        <div class="small-4  medium-4 medium-offset-2 large-4 large-offset-2 columns">
+
+            <img src="./data/icons/uiuc.png" style="width: 50%"></div>
+
+        <div class="small-8 medium-6 large-6 columns" style="text-align: left">
+            <span style="font-size: x-large; color: darkblue"> University Of Illinois </span> <br>
+            <span> 2011-present  </span> <br><br>
+            <span class="font-pacifico"> TA for Class </span> <br>
+            <div> Description Coming soon </div> <br>
+            <span class="font-pacifico"> Moderator for CS 242 </span> <br>
+            <span class="font-copperplate" style="font-size: small"> Fall 2014, Spring 2015</span>
+            <div> Was responsible for 2 each each semester. Each section had 6 students.
+                I advised students on coding styles, eveluated their presenatiton and code
+                reviews based on the quality of tests, languages, brest practices and other
+                criterion. </div> <br>
+            <span class="font-pacifico"> Grader for ME 170 </span> <br>
+            <span class="font-copperplate"> Spring 2012 - Spring 2015</span>
+            <div> Graded 2 sections each semester for ME 170 which is a computer aided development
+                course. </div> <br>
+        </div>
+    </div>
+
+    <br>
+    <br>
 </div>
+
+<div class="row">
+
+
+</div>
+
+<div id="skills" class="text-center font-pacifico" style="font-size: 45px">
+    <a href="./technical.html#/technology" target="_self"> Technical Skills </a></div>
+<br> <br>
+
+
+<br>
+<div class="text-center font-pacifico" style="font-size: 45px">
+ <a href="./funStuff.html" target="_blank"> Fun stuff I have done </a></div>
+<br> <br>
+
+
+<br>
+<div class="text-center font-pacifico" style="font-size: 45px">
+<a href="./interesting.html" target="_blank">  Interesting Questions </a></div>
+<br> <br>
+
+
+<!--<div class="text-center font-pacifico" style="font-size: 45px">-->
+   <!--Fun Stuff </div>-->
+<!--<br> <br>-->
+
+<!--<div id="FunStuff" style="margin: 25px">-->
+    <!--<div id="app2" ng-app="funApp">-->
+
+        <!--<div class="text-center font-copperplate">-->
+
+            <!--<a href="#/poems" class="myButton"> Poems </a>-->
+            <!--<a href="#/recitals" class="myButton"> Piano Recitals</a>-->
+            <!--<a href="#/standup" class="myButton"> Stand-Up</a>-->
+            <!--<a href="#/adventure" class="myButton"> Adventure </a>-->
+            <!--<a href="#/hide" class="myButton"> Hide All</a>-->
+
+        <!--</div>-->
+        <!--<div ng-view>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<br>-->
+<!--<div class="text-center font-pacifico" style="font-size: 45px">-->
+    <!--Interesting Questions </div>-->
+<!--<br> <br>-->
+
+<!--<div id="questions" style="margin: 25px">-->
+    <!--<div ng-app="quesApp" >-->
+
+        <!--<div class="text-center font-copperplate">-->
+
+            <!--<a href="#/projects" class="myButton"> Projects </a>-->
+            <!--<a href="#/courses" class="myButton"> Courses</a>-->
+            <!--<a href="#/technology" class="myButton"> Stuff I Know</a>-->
+            <!--<a href="#/hide" class="myButton"> Hide All</a>-->
+
+        <!--</div>-->
+        <!--<div ng-view>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
 
 
 
@@ -304,7 +392,7 @@
     <br><br>
     <i class="fa fa-cloud"></i>
     <i class="fa fa-cloud"></i>
-    <i class="fa fa-cloud"></i> A website developed by Abhishek Harish for CS 498, Spring 2015 @ UIUC for MP1
+    <i class="fa fa-cloud"></i> A website developed by Abhishek Harish @Design Style owned by Abhishek Harish
     <i class="fa fa-cloud"></i>
     <i class="fa fa-cloud"></i>
     <i class="fa fa-cloud"></i>
@@ -331,45 +419,6 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./lib/slick.js/slick/slick.min.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-       // $('.carousel-class').slick();
-        $('.carousel-class').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        arrows: true,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 900,
-                    settings: {
-                        arrows: true,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: true,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    });
-</script>
 
 
 </body>

@@ -124,7 +124,7 @@ h1 {
 
 #socialWrapper{
 
-   font-family: $rockwell;
+   font-family: $copperPlate;
   font-size: 35px;
   text-align: center;
   vertical-align: middle;
@@ -282,5 +282,45 @@ h1 {
 
 .font-pacifico{
   font-family: $pacifico;
+}
+
+.image img {
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;
+}
+
+.image:hover img {
+  -webkit-transform:scale(1.25); /* Safari and Chrome */
+  -moz-transform:scale(1.25); /* Firefox */
+  -ms-transform:scale(1.25); /* IE 9 */
+  -o-transform:scale(1.25); /* Opera */
+  transform:scale(1.25);
+}
+
+.myButton{
+  background-color: #D2E0E6;
+  color: #007095;
+  text-shadow: 2px 2px #ffffff;
+  border-radius: 15px;
+  border-color: transparent;
+  height: auto;
+  padding: 20px;
+  font-size: x-large;
+
+}
+
+.myButton:hover{
+  background-color: #007095;
+  color: #ffffff;
+  text-shadow: 2px 2px black;
+  border-radius: 15px;
+  border-color: transparent;
+  height: auto;
+  padding: 20px;
+  font-size: x-large;
+
 }
 
